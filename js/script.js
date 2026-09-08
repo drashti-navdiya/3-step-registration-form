@@ -96,7 +96,7 @@ back2.addEventListener("click", function () {
 back3.addEventListener("click", function () {
 
     step3.style.display = "none";
-    step2.style.display = "block";this.CDATA_SECTION_NODE.toExponential.
+    step2.style.display = "block";
 
 });
 
