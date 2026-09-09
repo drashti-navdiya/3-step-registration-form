@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3 Step Form</title>
+
+    <title>Three Step Form</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,69 +13,206 @@
 <body>
 
     <div class="form-container">
+        <form>
 
         <h1>Registration Form</h1>
-        <form id="myForm">
-            
-        <!-- STEP 1 -->
-        <section id="step1" class="form-step">
+
+
+        <!-- STEP INDICATOR -->
+
+        <div class="steps">
+
+            <div class="step active" id="indicator1">1</div>
+
+            <div class="line"></div>
+
+            <div class="step" id="indicator2">2</div>
+
+            <div class="line"></div>
+
+            <div class="step" id="indicator3">3</div>
+
+        </div>
+
+
+
+         <!-- STEP 1 -->
+
+        <div id="step1" class="form-step">
 
             <h2>Personal Information</h2>
 
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
+            <div class="form-group">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+                <label for="name">Full Name</label>
 
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
 
-            <button type="button" id="next1">Next</button>
+                <span id="nameError" class="error"></span>
 
-        </section>
+            </div>
+
+            <div class="form-group">
+
+                <label for="email">Email</label>
+
+                <input
+                    type="text"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+                <span id="emailError" class="error"></span>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="mobile">Mobile Number</label>
+
+                <input
+                    type="text"
+                    id="mobile"
+                    placeholder="Enter 10 digit mobile number"
+                    maxlength="10"
+                >
+
+                <span id="mobileError" class="error"></span>
+
+            </div>
 
 
-        <!-- STEP 2 -->
-        <section id="step2" class="form-step">
+            <button
+                type="button"
+                id="next1"
+                class="next-btn"
+            >
+                Next
+            </button>
+
+        </div>
+
+
+
+        <!-- STEP 2  -->
+
+        <div id="step2" class="form-step hidden">
 
             <h2>Address Information</h2>
 
-            <label for="address">Address</label>
-            <textarea id="address" name="address"></textarea>
+            <div class="form-group">
 
-            <label for="city">City</label>
-            <input type="text" id="city" name="city">
+                <label for="address">Address</label>
 
-            <label for="pincode">Pincode</label>
-            <input type="text" id="pincode" name="pincode">
+                <textarea
+                    id="address"
+                    placeholder="Enter your address"
+                    rows="4"
+                ></textarea>
 
-            <div class="buttons">
-                <button type="button" id="back2">Back</button>
-                <button type="button" id="next2">Next</button>
+                <span id="addressError" class="error"></span>
+
             </div>
 
-        </section>
+            <div class="form-group">
 
+                <label for="city">City</label>
 
-        <!-- STEP 3 -->
-        <section id="step3" class="form-step">
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="Enter your city"
+                >
 
-            <h2>Confirmation</h2>
+                <span id="cityError" class="error"></span>
 
-            <p>Please check your information before submitting.</p>
-
-            <div class="buttons">
-                <button type="button" id="back3">Back</button>
-                <button type="submit" id="submit">Submit</button>
             </div>
 
-        </section>
+            <div class="form-group">
+
+                <label for="pincode">Pincode</label>
+
+                <input
+                    type="text"
+                    id="pincode"
+                    placeholder="Enter 6 digit pincode"
+                    maxlength="6"
+                >
+
+                <span id="pincodeError" class="error"></span>
+
+            </div>
+
+
+            <div class="button-group">
+
+                <button
+                    type="button"
+                    id="back2"
+                    class="back-btn"
+                >
+                    Back
+                </button>
+
+                <button
+                    type="button"
+                    id="next2"
+                    class="next-btn"
+                >
+                    Next
+                </button>
+
+            </div>
+
+        </div>
+
+         <!-- STEP 3  -->
+
+        <div id="step3" class="form-step hidden">
+
+            <h2>Complete Registration</h2>
+
+
+            <p class="success-message hidden" id="successMessage">
+                Your information has been successfully validated!
+            </p>
+
+
+            <p id="confirmationText">
+                Please click Submit to complete your registration.
+            </p>
+
+
+            <div class="button-group">
+
+                <button
+                    type="button"
+                    id="back3"
+                    class="back-btn"
+                >
+                    Back
+                </button>
+
+                <button
+                    type="button"
+                    id="submitBtn"
+                    class="submit-btn"
+                >
+                    Submit
+                </button>
+
+            </div>
+
+        </div>
         </form>
     </div>
-
 
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
