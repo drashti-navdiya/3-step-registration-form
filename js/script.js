@@ -401,5 +401,6 @@ submitBtn.addEventListener("click", function () {
     confirmationText.classList.add("hidden");
 
     submitBtn.classList.add("hidden");
+    back3.classList.add("hidden");
 
 });
